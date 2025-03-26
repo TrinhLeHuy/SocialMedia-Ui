@@ -8,11 +8,12 @@
     box-sizing: border-box;
 }
 html {
-    front-size: 62.5%;
+    font-size: 62.5%;
 }
 body {
     font-family: 'Roboto', sans-serif;
-    front-size: 1.6rem;
+    font-size: 1.6rem;
+    color: rgb(28, 30, 33);
     line-height: 1.34;
     text-rendering: optimizeSpeed;
     direction: ltr;
