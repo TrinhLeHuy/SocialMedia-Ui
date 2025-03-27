@@ -4,7 +4,7 @@
     align-items: center;
 }
 .container {
-    width: 1850.49px;
+    width: var(--default-layout-width);
     min-height: 1000px;
     background-color: #1c1c1c;
     display: flex;
