@@ -1,13 +1,18 @@
-import Header from './Header';
+import Header from '~/components/Layout/component/Header';
 import SidebarMarket from './SidebarMarket';
+import classNames from 'classnames/bind';
+import styles from './MarketLayout.module.scss';
+
+const cx = classNames.bind(styles);
 
 function MarketLayout({ children }) {
     return (
-        <div>
+        <div className={cx('wrapper')}>
             <Header />
-            <div className="container"></div>
-            <SidebarMarket />
-            <div className="content">{children}</div>
+            <div className={cx('container')}>
+                <SidebarMarket />
+                <div className={cx('content')}>{children}</div>
+            </div>
         </div>
     );
 }

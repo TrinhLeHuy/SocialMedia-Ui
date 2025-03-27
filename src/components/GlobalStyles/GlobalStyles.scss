@@ -5,6 +5,8 @@
     --primary: #5aa7ff;
 }
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html {
@@ -13,7 +15,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    color: rgb(28, 30, 33);
+    color: #cacacc;
     line-height: 1.34;
     text-rendering: optimizeSpeed;
     direction: ltr;

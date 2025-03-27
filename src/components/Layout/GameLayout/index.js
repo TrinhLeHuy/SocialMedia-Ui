@@ -1,13 +1,18 @@
-import Header from './Header';
+import Header from '~/components/Layout/component/Header';
 import SidebarGame from './SidebarGame';
+import classNames from 'classnames/bind';
+import styles from './GameLayout.module.scss';
+
+const cx = classNames.bind(styles);
 
 function GameLayout({ children }) {
     return (
-        <div>
+        <div className={cx('wrapper')}>
             <Header />
-            <div className="container"></div>
-            <SidebarGame />
-            <div className="content">{children}</div>
+            <div className={cx('container')}>
+                <SidebarGame />
+                <div className={cx('content')}>{children}</div>
+            </div>
         </div>
     );
 }
