@@ -2,4 +2,139 @@
     width: 360px;
     min-height: 786.8px;
     background-color: rgb(28, 28, 28);
+    color: #fff;
+    padding: 16px;
+    box-sizing: border-box;
+    /* Bạn có thể tùy chỉnh font theo ý muốn */
+    font-family: Arial, sans-serif;
+}
+
+/* Vùng tìm kiếm ở trên cùng */
+.search-wrapper {
+    position: relative;
+    margin-bottom: 16px;
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #b0b3b8;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 12px 8px 32px;
+        border-radius: 20px;
+        border: none;
+        background-color: #3a3b3c;
+        color: #fff;
+        outline: none;
+        font-size: 14px;
+
+        &::placeholder {
+            color: #b0b3b8;
+        }
+    }
+}
+
+/* Danh sách menu chức năng */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.2s ease;
+
+        .icon {
+            font-size: 18px;
+            margin-right: 12px;
+        }
+
+        .menu-label {
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        &.create-listing-wrapper {
+            button.create-listing {
+                width: 100%;
+                text-align: left;
+                background-color: #3a3b3c;
+                color: #fff;
+                border: none;
+                border-radius: 8px;
+                padding: 8px 12px;
+                cursor: pointer;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: #4a4b4c;
+                }
+            }
+        }
+    }
+}
+
+/* Vùng vị trí */
+.location {
+    margin-bottom: 16px;
+
+    .location-title {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .location-description {
+        font-size: 13px;
+        color: #b0b3b8;
+        margin: 4px 0 0 0;
+    }
+}
+
+/* Danh sách hạng mục */
+.category-list {
+    .category-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 6px 0;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #3a3b3c;
+            }
+
+            .category-icon {
+                font-size: 18px;
+                margin-right: 12px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
 }

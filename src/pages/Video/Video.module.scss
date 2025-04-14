@@ -1,0 +1,164 @@
+.video-wrapper {
+    padding: 16px;
+    background-color: #18191a;
+    color: #e4e6eb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 70px;
+}
+
+/* ===== Slider “Video mới dành cho bạn” ===== */
+.recommended {
+    background-color: #333;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+    .rec-title {
+        font-size: 1rem;
+        margin: 0 0 8px;
+        display: flex;
+        align-items: center;
+
+        .count {
+            margin-left: 4px;
+            color: #b0b3b8;
+        }
+    }
+
+    .slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #4e4f50;
+            border-radius: 3px;
+        }
+
+        .slider-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            background: #222;
+            border-radius: 8px;
+            padding: 8px;
+
+            .slider-avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 8px;
+            }
+
+            .slider-text {
+                font-size: 0.9rem;
+                color: #e4e6eb;
+            }
+        }
+    }
+}
+
+/* ===== Feed video posts ===== */
+.video-feed {
+    .video-post {
+        background-color: #333;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 24px;
+
+        /* Header */
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 8px;
+            }
+
+            .channel-info {
+                flex: 1;
+
+                .channel-name {
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .video-time {
+                    font-size: 12px;
+                    color: #999;
+                    margin: 0;
+                }
+            }
+
+            .follow-btn,
+            .more-btn {
+                background: none;
+                border: none;
+                color: #e4e6eb;
+                cursor: pointer;
+                font-size: 0.9rem;
+                margin-left: 8px;
+            }
+        }
+
+        /* Tiêu đề */
+        .post-title {
+            margin: 8px 0;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Video */
+        .post-video {
+            width: 100%;
+            border-radius: 8px;
+            background: #000;
+            margin-bottom: 8px;
+        }
+
+        /* Thống kê */
+        .post-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #65676b;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+
+        /* Hành động */
+        .post-actions {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #4e4f50;
+            padding-top: 4px;
+
+            .action-btn {
+                flex: 1;
+                background: none;
+                border: none;
+                padding: 8px 0;
+                font-size: 0.9rem;
+                cursor: pointer;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background-color: #4e4f50;
+                }
+            }
+
+            .liked {
+                color: #1877f2;
+                font-weight: bold;
+            }
+        }
+    }
+}

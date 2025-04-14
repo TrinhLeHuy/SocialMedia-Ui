@@ -4,8 +4,7 @@
     background-color: #18191a;
     color: #e4e6eb;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: 70px;
-    margin-left: 70px;
+    margin: 0 70px;
 }
 
 /* ===== Phần tạo bài đăng ===== */
@@ -19,14 +18,14 @@
 .create-post-input {
     display: flex;
     margin-bottom: 12px;
-}
 
-.create-post-input .avatar {
-    border-radius: 50%;
-    margin-right: 8px;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
+    .avatar {
+        border-radius: 50%;
+        margin-right: 8px;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
 }
 
 .input-post {
@@ -36,16 +35,17 @@
     border-radius: 20px;
     padding: 8px 16px;
     color: #e4e6eb;
+    font-size: 0.95rem;
+
+    &::placeholder {
+        color: #b0b3b8;
+    }
 }
 
-.input-post::placeholder {
-    color: #b0b3b8;
-}
-
-/* Phần các nút chức năng */
 .create-post-actions {
     display: flex;
     justify-content: space-between;
+    margin-top: 8px;
 }
 
 .action-btn {
@@ -56,12 +56,13 @@
     border: none;
     border-radius: 8px;
     color: #e4e6eb;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.2s;
-}
 
-.action-btn:hover {
-    background-color: #6b6c6d;
+    &:hover {
+        background-color: #6b6c6d;
+    }
 }
 
 /* ===== Dãy stories ===== */
@@ -96,49 +97,77 @@
 }
 
 /* ===== Feed các bài post ===== */
-.feed .post {
-    background-color: #333;
-    margin-bottom: 24px;
-    padding: 16px;
-    border-radius: 8px;
+.feed {
+    .post {
+        background-color: #333;
+        margin-bottom: 24px;
+        padding: 16px;
+        border-radius: 8px;
+
+        /* Header */
+        &-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .post-avatar {
+            border-radius: 50%;
+            margin-right: 8px;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        .post-info {
+            display: flex;
+            flex-direction: column;
+
+            .post-author {
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .post-time {
+                font-size: 12px;
+                color: #999;
+                margin: 0;
+            }
+        }
+
+        /* Nội dung */
+        .post-content {
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Thống kê lượt tương tác */
+        .post-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #65676b;
+            font-size: 0.875rem;
+            margin: 8px 0;
+        }
+
+        /* Nút Like / Comment / Share */
+        .post-actions {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #4e4f50;
+            padding-top: 4px;
+        }
+    }
 }
 
-.post-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.post-avatar {
-    border-radius: 50%;
-    margin-right: 8px;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-}
-
-.post-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.post-author {
+/* State khi đã like */
+.liked {
+    color: #1877f2 !important;
     font-weight: bold;
-    margin: 0;
-}
-
-.post-time {
-    font-size: 12px;
-    color: #999;
-    margin: 0;
-}
-
-.post-content {
-    margin: 8px 0;
-}
-
-.post-image {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
 }

@@ -1,5 +1,159 @@
 .wrapper {
-    width: 360px;
+    width: 360px; /* Chiều rộng sidebar */
     min-height: 786.8px;
     background-color: rgb(28, 28, 28);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* Tìm kiếm nhóm */
+.search-bar {
+    position: relative;
+    margin-bottom: 16px;
+
+    .search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: #b0b3b8;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 12px 8px 36px;
+        border-radius: 20px;
+        border: none;
+        background-color: #3a3b3c;
+        color: #fff;
+        font-size: 0.9rem;
+        outline: none;
+
+        &::placeholder {
+            color: #b0b3b8;
+        }
+    }
+}
+
+/* Menu */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        .menu-icon {
+            font-size: 1rem;
+        }
+
+        span {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+/* Nút tạo nhóm */
+.create-group-btn {
+    width: 100%;
+    background-color: #3a3b3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    &:hover {
+        background-color: #4a4b4c;
+    }
+
+    svg {
+        font-size: 1rem;
+    }
+}
+
+/* Danh sách nhóm do bạn quản lý / đã tham gia */
+.group-section {
+    margin-bottom: 16px;
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .section-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .view-all {
+        font-size: 0.8rem;
+        color: #2d88ff;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .group-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 0;
+        border-radius: 8px;
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        .group-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .group-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .group-name {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .group-last-activity {
+                font-size: 0.8rem;
+                color: #b0b3b8;
+            }
+        }
+    }
 }

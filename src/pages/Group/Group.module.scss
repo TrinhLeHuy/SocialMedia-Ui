@@ -1,0 +1,162 @@
+.group-page {
+    max-width: 600px; /* Giới hạn chiều rộng cho post */
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #18191a; /* Nền tối kiểu Facebook */
+    color: #e4e6eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề "Hoạt động gần đây" */
+.recent-activity-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #e4e6eb;
+}
+
+/* ===== BÀI VIẾT ===== */
+.post {
+    background-color: #242526;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    /* Header */
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .author-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .author-name {
+                font-size: 0.95rem;
+                font-weight: 600;
+            }
+
+            .time {
+                font-size: 0.8rem;
+                color: #b0b3b8;
+            }
+        }
+
+        .post-options {
+            font-size: 1.2rem;
+            color: #b0b3b8;
+            cursor: pointer;
+
+            &:hover {
+                color: #e4e6eb;
+            }
+        }
+    }
+
+    /* Nội dung bài viết */
+    &-content {
+        p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+    }
+
+    /* Ảnh bài viết */
+    &-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    }
+
+    /* Thanh số liệu lượt thích, bình luận, chia sẻ */
+    .post-stats {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: #b0b3b8;
+        border-top: 1px solid #3a3b3c;
+        border-bottom: 1px solid #3a3b3c;
+        padding: 8px 0;
+
+        span {
+            margin-right: 8px;
+        }
+    }
+
+    /* Thanh hành động: Thích, Bình luận, Chia sẻ */
+    .post-actions {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 4px;
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: #b0b3b8;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 0;
+            flex: 1;
+            justify-content: center;
+
+            &:hover {
+                background-color: #3a3b3c;
+                border-radius: 8px;
+                color: #e4e6eb;
+            }
+
+            svg {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    /* Khung nhập bình luận "Viết cảm nghĩ..." */
+    .comment-input {
+        display: flex;
+        align-items: center;
+        margin-top: 4px;
+        padding-top: 8px;
+        border-top: 1px solid #3a3b3c;
+
+        .avatar-small {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .comment-text {
+            flex: 1;
+            background-color: #3a3b3c;
+            border: none;
+            border-radius: 16px;
+            padding: 8px 12px;
+            color: #e4e6eb;
+            font-size: 0.9rem;
+            outline: none;
+
+            &::placeholder {
+                color: #b0b3b8;
+            }
+        }
+    }
+}

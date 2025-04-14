@@ -1,0 +1,132 @@
+.game-page {
+    flex: 1; /* Giả định bạn đặt sidebargame bên trái, .game-page sẽ chiếm phần còn lại */
+    padding: 16px;
+    background-color: #18191a;
+    color: #e4e6eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Mỗi section gói một danh mục game */
+.section {
+    margin-bottom: 24px;
+
+    .section-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+    }
+}
+
+/* ===== Game chúng tôi thích ===== */
+.game-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap; /* Cho phép game-item xuống hàng nếu màn hình hẹp */
+
+    .game-item {
+        background-color: #242526;
+        border-radius: 8px;
+        width: 180px; /* Có thể điều chỉnh */
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        .game-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .game-info {
+            padding: 8px;
+
+            .game-title {
+                display: block;
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+
+            .game-player {
+                font-size: 0.8rem;
+                color: #b0b3b8;
+            }
+        }
+    }
+}
+
+/* ===== Đang diễn ra (banner) ===== */
+.game-banner {
+    display: flex;
+    gap: 16px;
+
+    .banner-item {
+        background-color: #242526;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        .banner-image {
+            width: 280px;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner-info {
+            padding: 8px;
+
+            .banner-title {
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+/* ===== Game có nhiều người chơi nhất ===== */
+.popular-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    .popular-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        background-color: #242526;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        padding: 8px;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        .popular-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .popular-title {
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    }
+}
