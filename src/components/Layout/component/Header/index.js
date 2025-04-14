@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faMagnifyingGlass,
-    faSpinner,
+    // faSpinner,
     faHome,
     faTv,
     faStore,
@@ -80,7 +80,6 @@ function Header() {
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
                         <input placeholder="Search Facebook" spellCheck={false} onFocus={() => setShowResult(true)} />
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
                     </div>
                 </Tippy>
 
@@ -114,21 +113,11 @@ function Header() {
                     )}
 
                     {/* Profile dropdown */}
-                    <Tippy
-                        interactive
-                        placement="bottom-end"
-                        render={(attrs) => (
-                            <div className={cx('profile-menu')} {...attrs}>
-                                <PopperWrapper>
-                                    <AccountItem />
-                                </PopperWrapper>
-                            </div>
-                        )}
-                    >
-                        <button className={cx('action-btn')}>
-                            <FontAwesomeIcon icon={faCaretDown} />
-                        </button>
-                    </Tippy>
+                    {/* <Tippy*/}
+                    <button className={cx('action-btn')}>
+                        <FontAwesomeIcon icon={faCaretDown} />
+                    </button>
+                    {/* </Tippy> */}
                 </div>
             </div>
         </header>

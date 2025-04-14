@@ -13,6 +13,7 @@ import {
     faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './SidebarHome.module.scss';
+import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
@@ -20,7 +21,7 @@ const menuItems = [
     {
         icon: faUser,
         title: 'Huy Lê',
-        avatar: 'https://via.placeholder.com/40', // thay bằng avatar thật
+        avatar: images.avatar, // thay bằng avatar thật
         isProfile: true,
     },
     { icon: faUserFriends, title: 'Bạn bè' },
@@ -35,23 +36,23 @@ const menuItems = [
 
 const shortcuts = [
     {
-        iconUrl: 'https://via.placeholder.com/40/FFCC00/000000?text=SGU',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/1011/1011123.png', // icon sách
         title: 'SGU - HCI - 012025',
     },
     {
-        iconUrl: 'https://via.placeholder.com/40/88CC88/000000?text=MG',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/3536/3536505.png', // icon cộng đồng
         title: 'Bộ tộc MixiGaming',
     },
     {
-        iconUrl: 'https://via.placeholder.com/40/6699CC/ffffff?text=IT',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png', // icon tài liệu
         title: 'ĐỀ THI KHOA CNTT SGU',
     },
     {
-        iconUrl: 'https://via.placeholder.com/40/CC6699/ffffff?text=RS',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/1904/1904425.png', // icon nghiên cứu
         title: 'Research SGU',
     },
     {
-        iconUrl: 'https://via.placeholder.com/40/666666/ffffff?text=CS',
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/1077/1077063.png', // icon sinh viên
         title: 'Cộng đồng Sinh viên SGU',
     },
 ];

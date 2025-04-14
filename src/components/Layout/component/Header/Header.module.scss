@@ -53,7 +53,7 @@
     }
 
     input {
-        flex: 1;
+        // flex: 1;
         background: transparent;
         border: none;
         outline: none;
@@ -66,13 +66,13 @@
         }
     }
 
-    .loading {
-        position: absolute;
-        right: 60px;
-        color: #b0b3b8;
-        font-size: 14px;
-        animation: spin 1s linear infinite;
-    }
+    // .loading {
+    //     position: absolute;
+    //     right: 60px;
+    //     color: #b0b3b8;
+    //     font-size: 14px;
+    //     animation: spin 1s linear infinite;
+    // }
 }
 
 @keyframes spin {
@@ -140,6 +140,7 @@
 .action {
     display: flex;
     align-items: center;
+    margin-left: 100px;
 
     .action-btn {
         width: 36px;
