@@ -1,5 +1,109 @@
+/* SidebarHome.module.scss */
+
 .wrapper {
     width: 360px;
     min-height: 786.8px;
     background-color: rgb(28, 28, 28);
+    padding: 16px;
+    color: #e4e6eb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #3a3b3c;
+        }
+
+        &.profile {
+            .avatar {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 12px;
+                object-fit: cover;
+            }
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+}
+
+.divider {
+    height: 1px;
+    background-color: #3a3b3c;
+    margin: 12px 0;
+}
+
+.shortcuts-section {
+    .shortcuts-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: #b0b3b8;
+    }
+
+    .shortcuts-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #3a3b3c;
+            }
+
+            .shortcut-icon {
+                width: 28px;
+                height: 28px;
+                border-radius: 4px;
+                margin-right: 10px;
+                object-fit: cover;
+            }
+
+            .shortcut-title {
+                font-size: 15px;
+                font-weight: 400;
+                white-space: nowrap;
+            }
+
+            &.see-more {
+                .shortcut-icon {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
 }

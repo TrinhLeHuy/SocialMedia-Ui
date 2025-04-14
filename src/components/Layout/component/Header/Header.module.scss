@@ -1,14 +1,173 @@
+// Header.module.scss
 .wrapper {
     width: 100%;
     height: var(--default-layout-header-height);
+    background: #242526;
+    border-bottom: 1px solid #3e4042;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    border-top: 1px solid #3a3a3a;
-    border-bottom: 1px solid #3a3a3a;
 }
+
 .inner {
-    height: 100%;
     width: var(--default-layout-width);
-    background-color: rgb(28, 30, 33);
+    height: 100%;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo trái */
+.logo {
+    margin-right: 12px;
+
+    a {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+/* Search box */
+.search {
+    position: relative;
+    background: #3a3b3c;
+    height: 36px;
+    width: 280px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+
+    .search-btn {
+        margin: 0 8px;
+        background: transparent;
+        border: none;
+        color: #b0b3b8;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #e4e6eb;
+        font-size: 14px;
+        padding: 0 8px;
+
+        &::placeholder {
+            color: #b0b3b8;
+        }
+    }
+
+    .loading {
+        position: absolute;
+        right: 60px;
+        color: #b0b3b8;
+        font-size: 14px;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tippy dropdown search result */
+.search-result {
+    width: 360px;
+    background: #3a3b3c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    transform: translateX(-64px);
+    z-index: 1000;
+    padding: 8px 0;
+}
+
+.activities {
+    flex: 1; // chiếm khoảng giữa
+    display: flex;
+    justify-content: center; // gom về giữa
+    align-items: center;
+    gap: 12px; // khoảng cách giữa mỗi icon
+}
+
+.activity-item {
+    flex: 0; // không giãn
+    padding: 0 55px; // cho khoảng “đệm” ngang
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e4e6eb;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+
+    &:hover {
+        background: #3a3b3c;
+        border-radius: 8px;
+    }
+
+    &.active {
+        color: #2e81f4;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #2e81f4;
+        }
+    }
+}
+
+/* Các nút hành động bên phải */
+.action {
+    display: flex;
+    align-items: center;
+
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        margin-left: 8px;
+        background: #3a3b3c;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #e4e6eb;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #4e4f50;
+        }
+    }
+
+    /* Nếu có avatar người dùng */
+    .profile-btn {
+        padding: 0;
+        img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+    }
 }
